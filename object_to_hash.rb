@@ -1,5 +1,3 @@
-# require_relative "apply"
-
 class ConvertToHash
 	def self.object_to_hash(object)
 		bigObject = Hash.new
