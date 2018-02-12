@@ -27,9 +27,12 @@ BeamUsUp.teleporter(startrek)
 
 
 enterprise = Starship::Energize.new("1","Spock","Science Officer")
-puts enterprise
+discovery = Starship::Engage.new("00004002020","Vulcan")
+discovery.to_json
 enterprise = ConvertToHash.object_to_hash(enterprise)
+discovery = ConvertToHash.object_to_hash(discovery)
 enterprise.to_json
+discovery.to_json
 
 gamesphere
 gamesphere.to_json

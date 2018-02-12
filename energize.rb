@@ -1,4 +1,4 @@
-# require_relative "apply.rb"
+require_relative "object_to_hash"
 module Starship
 	class Energize
 		def initialize(id,oname,rank)
@@ -7,8 +7,11 @@ module Starship
 			@officer_rank = rank
 		end
 	end
-end
 
-#class Test
-	enterprise = Starship::Energize.new("1","Spock","Science Officer")
-#end
+	class Engage
+		def initialize(coordinates,planet)
+			@co_ordinates = coordinates
+			@mission_planet = planet
+		end
+	end
+end
