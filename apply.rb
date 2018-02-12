@@ -3,6 +3,7 @@ require_relative "game"
 require_relative "monster"
 require_relative "object_to_hash"
 require_relative "beamusup"
+require_relative "energize"
 
 gamesphere = Game.new
 	gamesphere.game = "call_of_duty"
@@ -22,9 +23,13 @@ startrek = Game.new
 			bigMonster.xp = 100
 	startrek.Monster = BeamUsUp.teleporter(bigMonster) # star trek sucks
 	startrek = BeamUsUp.teleporter(startrek)
-
-
 BeamUsUp.teleporter(startrek)
+
+
+enterprise = Starship::Energize.new("1","Spock","Science Officer")
+puts enterprise
+enterprise = ConvertToHash.object_to_hash(enterprise)
+enterprise.to_json
 
 gamesphere
 gamesphere.to_json
