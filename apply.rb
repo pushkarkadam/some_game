@@ -1,4 +1,5 @@
 require "json"
+require "ostruct"
 require_relative "game"
 require_relative "monster"
 require_relative "object_to_hash"
@@ -35,4 +36,7 @@ enterprise.to_json
 discovery.to_json
 
 gamesphere
-gamesphere.to_json
+fun = gamesphere.to_json
+
+big = JSON.parse(fun, object_class: OpenStruct)
+big.Monster.health
