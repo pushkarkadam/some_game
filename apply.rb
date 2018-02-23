@@ -5,6 +5,7 @@ require_relative "monster"
 require_relative "object_to_hash"
 require_relative "beamusup"
 require_relative "energize"
+require_relative "phasers"
 
 gamesphere = Game.new
 	gamesphere.game = "call_of_duty"
